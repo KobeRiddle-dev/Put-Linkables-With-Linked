@@ -8,14 +8,14 @@
         </mods>
 
         <match Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="VFE_KitchenSinkCabinet"]/designationCategory</xpath>
+            <xpath>/Defs/ThingDef[defName="VFE_KitchenSinkCabinet"]/designationCategory</xpath>
             <value>
                 <designationCategory>Ferny_Kitchen</designationCategory>
             </value>
         </match>
 
         <nomatch Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="VFE_KitchenSinkCabinet"]/designationCategory</xpath>
+            <xpath>/Defs/ThingDef[defName="VFE_KitchenSinkCabinet"]/designationCategory</xpath>
             <value>
                 <designationCategory>Production</designationCategory>
             </value>
@@ -25,7 +25,7 @@
 
     <!-- Production Linkables -->
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="VFE_DrugCabinet" or defName="VFE_MachiningCabinet" or defName="VFE_SmithyCabinet" 
+        <xpath>/Defs/ThingDef[defName="VFE_DrugCabinet" or defName="VFE_MachiningCabinet" or defName="VFE_SmithyCabinet" 
             or defName="VFE_TailorCabinet" or defName="VFE_FabricationCabinet"]/designationCategory</xpath>
         <value>
             <designationCategory>Production</designationCategory>
