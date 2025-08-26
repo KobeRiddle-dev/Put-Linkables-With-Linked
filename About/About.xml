@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Put Linkables With Linked!</name>
+	<author>Kobe Riddle</author>
+	<packageId>KobeRiddle.PutLinkablesWithLinked</packageId>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+	</modDependencies>
+	<description>Condenses stuff into dropdowns (more).</description>
+	<loadAfter>
+		<li>Ludeon.Rimworld</li>
+		<li>Ludeon.Rimworld.Royalty</li>
+		<li>Ludeon.Rimworld.Ideology</li>
+		<li>Ludeon.Rimworld.Biotech</li>
+		<li>Ludeon.Rimworld.Anomaly</li>
+		<li>Ludeon.Rimworld.Odyssey</li>
+
+		<li>Ferny.CategoriesDropdowns</li>
+		<li>Ferny.NetworkCategory</li>
+		<li>SmashPhil.VehicleFramework</li>
+
+		<li>Adaptive.PrimitiveStorage</li>
+		<li>Adaptive.Storage.Neolithic</li>
+		<li>ScpChemfuel.Appliances</li>
+		<li>Dubwise.DubsBadHygiene</li>
+		<li>WarlocksForge.FishTraps</li>
+		<li>Harkon.BiotechAddon.MedievalDeathrestCoffin</li>
+		<li>Animal.BedsNew</li>
+		<li>Nightmare.Museums</li>
+		<li>sbz.NeatStorageFridge</li>
+		<li>sbz.GravshipStorage"</li>
+		<li>sbz.NeatStorage"</li>
+		<li>Ferny.ProgressionAgriculture</li>
+		<li>Rebuild.Cotr.DoorsAndCorners</li>
+		<li>Phaneron.Basic.Storage</li>
+		<li>PeteTimesSix.ResearchReinvented.SteppingStones</li>
+		<li>Syrchalis.Processor.Framework</li>
+		<li>Aelanna.TransparentSubstructure</li>
+		<li>VanillaExpanded.VBooksE</li>
+		<li>VanillaExpanded.VBrewE</li>
+		<li>VanillaExpanded.VChemfuelE</li>
+		<li>VanillaExpanded.HelixienGas</li>
+		<li>VanillaExpanded.VNutrientE</li>
+		<li>VanillaExpanded.VCookEStews</li>
+		<li>VanillaExpanded.VFEArchitect</li>
+		<li>OskarPotocki.VFE.Classical</li>
+		<li>VanillaExpanded.VFECore</li>
+		<li>OskarPotocki.VFE.Medieval2</li>
+		<li>VanillaExpanded.VFEProduction</li>
+	</loadAfter>
+</ModMetaData>

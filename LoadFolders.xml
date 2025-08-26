@@ -1,0 +1,13 @@
+<loadFolders>
+    <v1.6>
+        <!-- Ludeon Studios Content -->
+        <li>/</li>
+        <li>Mod Patches/Core</li>
+
+        <!-- Mod Patches (alphabetical by folder name) -->
+        <li IfModActive="VanillaExpanded.VFECore">Mod Patches/VFE Furniture</li>
+        <li IfModActive="OskarPotocki.VFE.Medieval2">Mod Patches/VFE Medieval 2</li>
+        <li IfModActive="VanillaExpanded.VFEProduction">Mod Patches/VFE Production</li>
+        
+    </v1.6>
+</loadFolders>

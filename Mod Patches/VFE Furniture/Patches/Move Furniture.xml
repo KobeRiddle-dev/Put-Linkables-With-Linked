@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Production Linkables -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Misc_FileCabinet"]/designationCategory</xpath>
+        <value>
+            <designationCategory>Production</designationCategory>
+        </value>
+    </Operation>
+
+</Patch>
