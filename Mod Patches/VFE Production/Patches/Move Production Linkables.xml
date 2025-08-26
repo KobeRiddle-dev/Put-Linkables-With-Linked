@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    
+    <!-- Kitchen Linkables -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Kitchen Category</li>
+        </mods>
+
+        <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFE_KitchenSinkCabinet"]/designationCategory</xpath>
+            <value>
+                <designationCategory>Ferny_Kitchen</designationCategory>
+            </value>
+        </match>
+
+        <nomatch Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFE_KitchenSinkCabinet"]/designationCategory</xpath>
+            <value>
+                <designationCategory>Production</designationCategory>
+            </value>
+        </nomatch>
+
+    </Operation>
+
+    <!-- Production Linkables -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="VFE_DrugCabinet" or defName="VFE_MachiningCabinet" or defName="VFE_SmithyCabinet" 
+            or defName="VFE_TailorCabinet" or defName="VFE_FabricationCabinet"]/designationCategory</xpath>
+        <value>
+            <designationCategory>Production</designationCategory>
+        </value>
+    </Operation>
+
+</Patch>
