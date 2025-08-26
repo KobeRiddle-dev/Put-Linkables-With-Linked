@@ -8,7 +8,7 @@
             or defName="VFEM2_NotesStack" or defName="VFEM2_ResearchBoard"
             or defName="VFEM2_SmithingAnvil" or defName="VFEM2_ForgeBellows"
             or defName="VFEM2_ChiselRack" or defName="VFEM2_StoneClamp"
-            or defName="VFEM2_TailoringLoom" or defName="VFEM2_MannequinStand"]</xpath>
+            or defName="VFEM2_TailoringLoom" or defName="VFEM2_MannequinStand"]/designationCategory</xpath>
         <value>
             <designationCategory>Production</designationCategory>
         </value>
