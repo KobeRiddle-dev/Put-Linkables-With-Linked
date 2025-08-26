@@ -5,6 +5,7 @@
         <li>Mod Patches/Core</li>
 
         <!-- Mod Patches (alphabetical by folder name) -->
+        <li IfModActive="TrooperSmith1.LifeSupport">Mod Patches/Life Support</li>
         <li IfModActive="VanillaExpanded.VFECore">Mod Patches/VFE Furniture</li>
         <li IfModActive="OskarPotocki.VFE.Medieval2">Mod Patches/VFE Medieval 2</li>
         <li IfModActive="VanillaExpanded.VFEMedical">Mod Patches/VFE Medical</li>
