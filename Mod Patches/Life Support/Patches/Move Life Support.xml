@@ -2,23 +2,33 @@
 <Patch>
 
     <!-- Medical Linkables -->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Biotech</li>
-        </mods>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_Medical"]</xpath>
 
         <match Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="QE_LifeSupportSystem"]</xpath>
             <value>
-                <designationCategory>Biotech</designationCategory>
+                <designationCategory>Ferny_Medical</designationCategory>
             </value>
         </match>
 
-        <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="QE_LifeSupportSystem"]</xpath>
-            <value>
-                <designationCategory>Misc</designationCategory>
-            </value>
+        <nomatch Class="PatchOperationConditional">
+            <xpath>Defs/DesignationCategoryDef[defName="Biotech"]</xpath>
+
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="QE_LifeSupportSystem"]</xpath>
+                <value>
+                    <designationCategory>Biotech</designationCategory>
+                </value>
+            </match>
+
+            <nomatch Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="QE_LifeSupportSystem"]</xpath>
+                <value>
+                    <designationCategory>Misc</designationCategory>
+                </value>
+            </nomatch>
+
         </nomatch>
 
     </Operation>

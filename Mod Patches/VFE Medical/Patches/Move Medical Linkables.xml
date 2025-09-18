@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <!-- Production Linkables -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="Facility_ResearchCounter"]</xpath>
-        <value>
-            <designationCategory>Production</designationCategory>
-        </value>
+    <!-- Medical Linkables -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_Medical"]</xpath>
+
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Facility_ResearchCounter"]</xpath>
+            <value>
+                <designationCategory>Ferny_Medical</designationCategory>
+            </value>
+        </match>
+
+        <nomatch Class="PatchOperationConditional">
+            <xpath>Defs/DesignationCategoryDef[defName="Biotech"]</xpath>
+
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Facility_ResearchCounter"]</xpath>
+                <value>
+                    <designationCategory>Biotech</designationCategory>
+                </value>
+            </match>
+
+            <nomatch Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Facility_ResearchCounter"]</xpath>
+                <value>
+                    <designationCategory>Misc</designationCategory>
+                </value>
+            </nomatch>
+
+        </nomatch>
+
     </Operation>
 
 </Patch>

@@ -1,37 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <!-- Production Linkables -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="VFEM2_StonePolisher" or defName="VFEM2_ArtToolStand"
-            or defName="VFEM2_CleaverRack" or defName="VFEM2_CarvingBoard"
-            or defName="VFEM2_NotesStack" or defName="VFEM2_ResearchBoard"
-            or defName="VFEM2_SmithingAnvil" or defName="VFEM2_ForgeBellows"
-            or defName="VFEM2_ChiselRack" or defName="VFEM2_StoneClamp"
-            or defName="VFEM2_TailoringLoom" or defName="VFEM2_MannequinStand"]</xpath>
-        <value>
-            <designationCategory>Production</designationCategory>
-        </value>
-    </Operation>
-
-    <!-- Medical Linkables -->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Biotech</li>
-        </mods>
+    <!-- Crafting Linkables -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_Production"]</xpath>
 
         <match Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="VFEM2_SurgicalTools"]</xpath>
+            <xpath>Defs/ThingDef[defName="VFEM2_StonePolisher" or defName="VFEM2_ArtToolStand"
+                or defName="VFEM2_SmithingAnvil" or defName="VFEM2_ForgeBellows"
+                or defName="VFEM2_ChiselRack" or defName="VFEM2_StoneClamp"
+                or defName="VFEM2_TailoringLoom" or defName="VFEM2_MannequinStand"]</xpath>
             <value>
-                <designationCategory>Biotech</designationCategory>
+                <designationCategory>Ferny_Production</designationCategory>
             </value>
         </match>
 
         <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEM2_StonePolisher" or defName="VFEM2_ArtToolStand"
+                or defName="VFEM2_SmithingAnvil" or defName="VFEM2_ForgeBellows"
+                or defName="VFEM2_ChiselRack" or defName="VFEM2_StoneClamp"
+                or defName="VFEM2_TailoringLoom" or defName="VFEM2_MannequinStand"]</xpath>
+            <value>
+                <designationCategory>Production</designationCategory>
+            </value>
+        </nomatch>
+
+    </Operation>
+
+    <!-- Kitchen Linkables -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_Kitchen"]</xpath>
+
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEM2_CleaverRack" or defName="VFEM2_CarvingBoard"]</xpath>
+            <value>
+                <designationCategory>Ferny_Kitchen</designationCategory>
+            </value>
+        </match>
+
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEM2_CleaverRack" or defName="VFEM2_CarvingBoard"]</xpath>
+            <value>
+                <designationCategory>Production</designationCategory>
+            </value>
+        </nomatch>
+
+    </Operation>
+
+    <!-- Research Linkables  -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_ResearchProduction"]</xpath>
+
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEM2_NotesStack" or defName="VFEM2_ResearchBoard"]</xpath>
+            <value>
+                <designationCategory>Ferny_ResearchProduction</designationCategory>
+            </value>
+        </match>
+
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEM2_NotesStack" or defName="VFEM2_ResearchBoard"]</xpath>
+            <value>
+                <designationCategory>Production</designationCategory>
+            </value>
+        </nomatch>
+
+    </Operation>
+
+    <!-- Medical Linkables -->
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_Medical"]</xpath>
+
+        <match Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="VFEM2_SurgicalTools"]</xpath>
             <value>
-                <designationCategory>Misc</designationCategory>
+                <designationCategory>Ferny_Medical</designationCategory>
             </value>
+        </match>
+
+        <nomatch Class="PatchOperationConditional">
+            <xpath>Defs/DesignationCategoryDef[defName="Biotech"]</xpath>
+
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="VFEM2_SurgicalTools"]</xpath>
+                <value>
+                    <designationCategory>Biotech</designationCategory>
+                </value>
+            </match>
+
+            <nomatch Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="VFEM2_SurgicalTools"]</xpath>
+                <value>
+                    <designationCategory>Misc</designationCategory>
+                </value>
+            </nomatch>
+
         </nomatch>
 
     </Operation>

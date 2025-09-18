@@ -2,11 +2,43 @@
 <Patch>
 
     <!-- Production Linkables -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="ToolCabinet"]</xpath>
-        <value>
-            <designationCategory>Production</designationCategory>
-        </value>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_Production"]</xpath>
+
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="ToolCabinet"]</xpath>
+            <value>
+                <designationCategory>Ferny_Production</designationCategory>
+            </value>
+        </match>
+
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="ToolCabinet"]</xpath>
+            <value>
+                <designationCategory>Production</designationCategory>
+            </value>
+        </nomatch>
+
+    </Operation>
+
+    <!-- Research Linkables  -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_ResearchProduction"]</xpath>
+
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="MultiAnalyzer"]</xpath>
+            <value>
+                <designationCategory>Ferny_ResearchProduction</designationCategory>
+            </value>
+        </match>
+
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="MultiAnalyzer"]</xpath>
+            <value>
+                <designationCategory>Production</designationCategory>
+            </value>
+        </nomatch>
+
     </Operation>
 
 </Patch>

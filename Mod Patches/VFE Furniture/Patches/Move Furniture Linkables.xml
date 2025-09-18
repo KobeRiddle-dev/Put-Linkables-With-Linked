@@ -2,11 +2,23 @@
 <Patch>
 
     <!-- Production Linkables -->
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="Misc_FileCabinet"]/designationCategory</xpath>
-        <value>
-            <designationCategory>Production</designationCategory>
-        </value>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/DesignationCategoryDef[defName="Ferny_ResearchProduction"]</xpath>
+        
+        <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="Misc_FileCabinet"]/designationCategory</xpath>
+            <value>
+                <designationCategory>Ferny_ResearchProduction</designationCategory>
+            </value>
+        </match>
+
+        <nomatch Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="Misc_FileCabinet"]/designationCategory</xpath>
+            <value>
+                <designationCategory>Production</designationCategory>
+            </value>
+        </nomatch>
+
     </Operation>
 
 </Patch>
