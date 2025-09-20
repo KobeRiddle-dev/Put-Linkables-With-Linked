@@ -2,7 +2,13 @@
 
 Moves linkables (like the tool cabinet) to the same category as the things they link to (usually Production).
 
-Recommended to be used with my other mod [Clean Categories: Extended](), especially if you are using Vanilla Factions Expanded: Medieval 2.
+Supports [Better Architect Menu](https://steamcommunity.com/workshop/filedetails/?id=3563882422)! The linkables will be moved to the correct subcategories if it's installed.
+
+## Recommended mods: 
+
+- My other mod [Clean Categories: Extended](), especially if you are using Vanilla Factions Expanded: Medieval 2.
+- Ferny's [Better Architect Menu](https://steamcommunity.com/workshop/filedetails/?id=3563882422)
+- My other mod [Better Architect Menu | Tweaks](https://steamcommunity.com/sharedfiles/filedetails/?id=3571749771)
 
 ## Patches
 
